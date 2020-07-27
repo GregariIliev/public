@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4bea6315-8ceb-41df-8a3c-a8630e549390" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1WNvt3V4ncu4TFf8pgb0qqrHsKO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="experimental" />
+  </component>
+  <component name="RunManager" selected="Application.Akvarium">
+    <configuration name="Akvarium" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Akvarium" />
+      <module name="OperationsAndCalculation" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Arxitekt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Arxitekt" />
+      <module name="OperationsAndCalculation" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Dvor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Dvor" />
+      <module name="OperationsAndCalculation" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InchToCentimeters" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="InchToCentimeters" />
+      <module name="OperationsAndCalculation" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZooMagazin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ZooMagazin" />
+      <module name="OperationsAndCalculation" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Akvarium" />
+        <item itemvalue="Application.Dvor" />
+        <item itemvalue="Application.ZooMagazin" />
+        <item itemvalue="Application.Arxitekt" />
+        <item itemvalue="Application.InchToCentimeters" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4bea6315-8ceb-41df-8a3c-a8630e549390" name="Default Changelist" comment="" />
+      <created>1579003077143</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579003077143</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="192" y="139" key="#Live_Templates" timestamp="1579003247462">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="192" y="139" key="#Live_Templates/0.0.1920.1040@0.0.1920.1040" timestamp="1579003247462" />
+    <state width="1878" height="282" key="GridCell.Tab.0.bottom" timestamp="1579208007419">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1878" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579208007419" />
+    <state width="1878" height="282" key="GridCell.Tab.0.center" timestamp="1579208007419">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1878" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579208007419" />
+    <state width="1878" height="282" key="GridCell.Tab.0.left" timestamp="1579208007419">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1878" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579208007419" />
+    <state width="1878" height="282" key="GridCell.Tab.0.right" timestamp="1579208007419">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1878" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579208007419" />
+    <state width="1878" height="348" key="GridCell.Tab.1.bottom" timestamp="1579009052222">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1878" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579009052222" />
+    <state width="1878" height="348" key="GridCell.Tab.1.center" timestamp="1579009052222">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1878" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579009052222" />
+    <state width="1878" height="348" key="GridCell.Tab.1.left" timestamp="1579009052222">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1878" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579009052222" />
+    <state width="1878" height="348" key="GridCell.Tab.1.right" timestamp="1579009052222">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1878" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579009052222" />
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1579203480460">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579203480460" />
+    <state x="741" y="326" key="save.file.as.template.dialog" timestamp="1579003160815">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="741" y="326" key="save.file.as.template.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579003160815" />
+  </component>
+</project>
