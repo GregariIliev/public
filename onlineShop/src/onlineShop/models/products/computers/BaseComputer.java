@@ -136,17 +136,41 @@ public abstract class BaseComputer extends BaseProduct implements Computer {
         for (Component component : components) {
             sum += component.getOverallPerformance();
         }
-        return sum / this.components.size();
+        if (sum > 0.0){
+            return sum / this.components.size();
+        }
+        return 0.0;
     }
 
+    private double getAveragePeripheralsOverallPerformance(){
+        double sum = 0.0;
+
+        for (Peripheral peripheral : peripherals) {
+            sum += peripheral.getOverallPerformance();
+        }
+        if (sum > 0.0){
+            return sum / this.peripherals.size();
+        }
+        return 0.0;
+    }
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(super.toString()).append(System.lineSeparator())
-                .append(String.format(OutputMessages.COMPUTER_COMPONENTS_TO_STRING, this.components.size()))
-                .append(System.lineSeparator()).append(this.components.stream()
-                .map(e -> String.format("%s%n", e)))
-                .append(String.format(OutputMessages.PERIPHERAL_TO_STRING, peripherals.size(), ));
+        stringBuilder.append(String.format(OutputMessages.PRODUCT_TO_STRING
+                ,getOverallPerformance(), getPrice(), this.getClass().getSimpleName(), getManufacturer(), getModel(), getId()))
+                .append(System.lineSeparator());
+        stringBuilder.append(String.format(" " + OutputMessages.COMPUTER_COMPONENTS_TO_STRING, components.size()))
+        .append(System.lineSeparator());
+        for (Component component : components) {
+            stringBuilder.append("  ").append(component.toString()).append(System.lineSeparator());
+        }
+        stringBuilder.append(String.format(" " + OutputMessages.COMPUTER_PERIPHERALS_TO_STRING, peripherals.size(), getAveragePeripheralsOverallPerformance()))
+        .append(System.lineSeparator());
+        for (Peripheral peripheral : peripherals) {
+            stringBuilder.append("  ").append(peripheral.toString()).append(System.lineSeparator());
+        }
 
+
+        return stringBuilder.toString().trim();
     }
 }

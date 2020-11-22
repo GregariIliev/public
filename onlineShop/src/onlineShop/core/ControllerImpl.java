@@ -85,7 +85,16 @@ public class ControllerImpl implements Controller {
 
     @Override
     public String BuyBestComputer(double budget) {
-        return null;
+        double overallPerformance = 0.0;
+
+        for (Computer computer : computerList) {
+            if (computer.getOverallPerformance() > overallPerformance && computer.getPrice() <= budget){
+                overallPerformance = computer.getOverallPerformance();
+                computerList.remove(computer);
+                return computer.toString();
+            }
+        }
+        throw new IllegalArgumentException(String.format(ExceptionMessages.CAN_NOT_BUY_COMPUTER,budget));
     }
 
 
