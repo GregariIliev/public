@@ -4,15 +4,13 @@ import easterRaces.entities.drivers.Driver;
 import easterRaces.entities.racers.Race;
 import easterRaces.repositories.interfaces.Repository;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
+import java.util.*;
 
 public class DriverRepository implements Repository<Driver> {
-    private Collection<Driver> models;
+    private Set<Driver> models;
 
     public DriverRepository() {
-        this.models = new ArrayList<>();
+        this.models = new HashSet<>();
     }
 
     @Override

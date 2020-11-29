@@ -1,6 +1,5 @@
 package easterRaces.core;
 
-import easterRaces.common.EnumPodiumPositions;
 import easterRaces.common.OutputMessages;
 import easterRaces.core.interfaces.Controller;
 import easterRaces.entities.cars.Car;
@@ -35,7 +34,8 @@ public class ControllerImpl implements Controller {
         if (driverRepository.getByName(driverName) != null) {
             throw new IllegalArgumentException(String.format(DRIVER_EXISTS, driverName));
         }
-        this.driverRepository.add(new DriverImpl(driverName));
+        Driver driver = new DriverImpl(driverName);
+        this.driverRepository.add(driver);
         return String.format(DRIVER_CREATED, driverName);
     }
 
@@ -54,7 +54,9 @@ public class ControllerImpl implements Controller {
             car = new SportsCar(model, horsePower);
             this.carRepository.add(car);
         }
-
+        if (car == null) {
+            return null;
+        }
         return String.format(CAR_CREATED, car.getClass().getSimpleName(), model);
     }
 
@@ -63,7 +65,8 @@ public class ControllerImpl implements Controller {
         if (this.raceRepository.getByName(name) != null) {
             throw new IllegalArgumentException(String.format(RACE_EXISTS, name));
         }
-        this.raceRepository.add(new RaceImpl(name, laps));
+        Race race = new RaceImpl(name, laps);
+        this.raceRepository.add(race);
         return String.format(RACE_CREATED, name);
     }
 
@@ -116,11 +119,18 @@ public class ControllerImpl implements Controller {
                 .sorted((l, r) -> Double.compare(r.getCar().calculateRacePoints(laps), l.getCar().calculateRacePoints(laps)))
                 .collect(Collectors.toList());
 
+//        for (int i = 0; i < 3; i++) {
+//            stringBuilder.append(String.format("Driver %s %s %s race.%n"
+//                   ,collect.get(i).getName(), EnumPodiumPositions.values()[i].place, raceName));
+//        }
         StringBuilder stringBuilder = new StringBuilder();
-        for (int i = 0; i < 3; i++) {
-            stringBuilder.append(String.format("Driver %s %s %s race.%n"
-                   ,collect.get(i).getName(), EnumPodiumPositions.values()[i].place, raceName));
-        }
+        stringBuilder.append(String.format(DRIVER_FIRST_POSITION, collect.get(0).getName(), raceName))
+                .append(System.lineSeparator())
+                .append(String.format(DRIVER_SECOND_POSITION, collect.get(1).getName(), raceName))
+                .append(System.lineSeparator())
+                .append(String.format(DRIVER_THIRD_POSITION, collect.get(2).getName(), raceName));
+
+        this.raceRepository.remove(race);
 
         return stringBuilder.toString();
     }

@@ -3,15 +3,13 @@ package easterRaces.repositories;
 import easterRaces.entities.cars.Car;
 import easterRaces.repositories.interfaces.Repository;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
+import java.util.*;
 
 public class CarRepository implements Repository<Car> {
-    private Collection<Car> models;
+    private Set<Car> models;
 
     public CarRepository() {
-        this.models = new ArrayList<>();
+        this.models = new HashSet<>();
     }
 
     @Override
