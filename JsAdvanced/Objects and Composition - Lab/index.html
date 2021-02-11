@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FromJSONToHTMLTable</title>
+    <style>
+        table, th {
+            border: groove;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+        }
+
+        td, th {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+</div>
+<script>
+    function fromJSONToHTMLTable(input) {
+        let arr = JSON.parse(input);
+        let output = ['<table>'];
+        output.push(makeKeyRow(arr));
+        arr.forEach(r => output.push(makeValueRow(r)));
+        output.push(['</table>']);
+
+        function makeKeyRow(arr) {
+            let keys = Object.keys(arr[0]);
+            let row = '   <tr>';
+            for (const key of keys) {
+                row += `<th>${escapeHtml(key)}</th>`;
+            }
+            row += '</tr>';
+            return row;
+        }
+
+        function makeValueRow(arr) {
+            let values = Object.values(arr);
+            let row = '   <tr>';
+            for (const value of values) {
+                row += `<td>${escapeHtml(value)}</td>`;
+            }
+            row += '</tr>';
+            return row;
+        }
+
+        function escapeHtml(value) {
+            return value
+                .toString()
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+
+        console.log(output.join('\n'));
+    }
+
+    window.onload = function () {
+        let container = document.getElementById('wrapper');
+        container.innerHTML = fromJSONToHTMLTable(['[{"Name":"Pesho","Score":4," Grade":8},{"Name":"Gosho","Score":5,"Grade":8},{"Name":"Angel","Score":5.50," Grade":10}]']);
+        //container.innerHTML = fromJSONToHTMLTable(['[{"Name":"Stamat","Price":5.5},{"Name":"Rumen","Price":6}]']);
+
+    };
+</script>
+</body>
+</html>
